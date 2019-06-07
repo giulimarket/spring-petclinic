@@ -33,7 +33,7 @@ public class DataLoader implements CommandLineRunner {
 		ownerService.save(owner1);
 		
 		Owner owner2 = new Owner();
-		owner2.setId(1L);
+		owner2.setId(2L);
 		owner2.setFirstName("Fiona");
 		owner2.setLastName("Gleanne");
 		
@@ -49,9 +49,9 @@ public class DataLoader implements CommandLineRunner {
 		vetService.save(vet1);
 		
 		Vet vet2 = new Vet();
-		vet2.setId(1L);
-		vet2.setFirstName("Sam");
-		vet2.setLastName("Axe");
+		vet2.setId(2L);
+		vet2.setFirstName("Peter");
+		vet2.setLastName("Drake");
 		
 		vetService.save(vet2);
 		
