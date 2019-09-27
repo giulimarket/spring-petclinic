@@ -2,17 +2,31 @@ package guru.springframework.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
-	private LocalDate localDate;
+	@Column(name = "date")
+	private LocalDate date;
+	
+	@Column(name = "description")
 	private String description;
+	
+	@ManyToOne
+	@JoinColumn (name = "pet_id")
 	private Pet pet;
 	
-	public LocalDate getLocalDate() {
-		return localDate;
+	public LocalDate getDate() {
+		return date;
 	}
-	public void setLocalDate(LocalDate localDate) {
-		this.localDate = localDate;
+	public void setDate(LocalDate localDate) {
+		this.date = localDate;
 	}
 	public String getDescription() {
 		return description;
