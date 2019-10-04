@@ -9,6 +9,8 @@ import java.util.Set;
 
 import javax.management.RuntimeErrorException;
 
+import org.springframework.context.annotation.Profile;
+
 import guru.springframework.sfgpetclinic.model.BaseEntity;
 
 public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
